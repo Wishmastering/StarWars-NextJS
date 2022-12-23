@@ -14,7 +14,7 @@ export default function Startshipcard (){
     // Hacemos el fetch de la informacion y
     // la ALMACENAMOS en el useState "setStarship"
     const fetchStarship = async () => {
-        return await axios.get('https://swapi.dev/api/starships')
+        return await axios.get('https://www.swapi.tech/api/starships/')
             .then((response) => {
                 setStarship(response.data.results)
             })
@@ -37,7 +37,7 @@ export default function Startshipcard (){
         // lo que se quiere mapear para cada uno
             <div className="cardi-b" key={index}>
                 <h5> {item.name}</h5>
-                <Image src={luke} width={200} height={300} alt="Luke"/>
+                <Image src={`https://starwars-visualguide.com/assets/img/starships/${item.uid}.jpg`} width={200} height={300} alt={item.name}/>
                 <div>
                     <h5>Learn More</h5>
                     <h5>Read Later</h5>

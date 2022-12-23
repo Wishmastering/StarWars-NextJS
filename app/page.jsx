@@ -33,15 +33,15 @@ export default function HomePage () {
             <div>
             <Planetcard/>
             </div>
-            {/* Seccion Starships */}
-            <h1> Starships </h1>
-            <Starshipcard/>
-    
 
             {/* Seccion Vehicles  */}
             <h1> Vehicles </h1>
              <Vehiclecard/>
 
+            {/* Seccion Starships */}
+            <h1> Starships </h1>
+            <Starshipcard/>
+    
 
             
 
