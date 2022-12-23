@@ -18,15 +18,15 @@
   width: 5px;
   height: 5px;
   /* add some background color to the thumb */
-  background: linear-gradient(70deg, rgb(9, 106, 106), rgb(10, 113, 10));
+  background: linear-gradient(180deg, rgb(9, 69, 106), rgb(113, 29, 10));
   /* add some border to the thumb */
-  border: 1px solid rgb(45, 154, 45);
+  border: 1px solid rgb(128, 37, 16);
   /* add some rounded corners to the thumb */
   border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background: linear-gradient(70deg, rgb(17, 159, 159), rgb(15, 150, 15));
+  background: linear-gradient(180deg, rgb(14, 118, 183), rgb(189, 52, 21));
 }
 
 nav {
@@ -41,13 +41,6 @@ nav div {
   padding-right: 2rem;
   /* background-color: aquamarine; */
 }
-
-/* div:has(> h1) {
-  width: 75%;
-  background-color: beige;
-  margin: 0 auto;
-  text-align: center;
-} */
 
 .title {
   width: 75%;

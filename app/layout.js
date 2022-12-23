@@ -2,10 +2,10 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head />
-      <body className="">
+      <body>
       
       
-      <div className="">{children}</div>
+      <div>{children}</div>
        
        
       {/* Abajo esta bootstrap */}

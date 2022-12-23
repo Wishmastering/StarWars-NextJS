@@ -1,33 +1,15 @@
 'use client'
-import axios from 'axios';
+
 import "../styles/globals.css"
-import Image from "next/image"
-import luke from  "../public/Luke.webp"
-import { useEffect, useState } from 'react';
 import Peoplecard from './components/peoplecard';
 import Planetcard from './components/planetcard';
+import Starshipcard from "./components/starshipcard";
+import Vehiclecard from "./components/vehiclecard";
+
 
 
 export default function HomePage () {
-    const [people, setPeople] = useState([]);
-    const [planet, setPlanet] = useState([]);
-
-    const fetch = async () => {
-       return await axios.get("https://swapi.dev/api/people")
-        .then( (response) => {
-            setPeople(response.data.results);
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-    };
-
-    useEffect(() => {fetch()}, [] );
-    console.log(people);
-
-   
-
+    
     return <>
         <div> 
             {/* Este es el Navbar */}
@@ -44,17 +26,21 @@ export default function HomePage () {
             {/* Seccion Characters  */}
             <h1> Characters </h1>
             {/* Aca empiezan las cards */}
-            <div className="card-container">
-                {people.map((item,index) => <div key={index}> <Peoplecard name={item.name} /> </div> )}
-            </div>
+            <Peoplecard/>
 
             {/* Seccion Planets  */}
-            <h1> People </h1>
+            <h1> Planets </h1>
             <div>
-                {planet.map((item, index) => <div key={index}> <Planetcard name={item.name}/></div>)}
+            <Planetcard/>
             </div>
+            {/* Seccion Starships */}
+            <h1> Starships </h1>
+            <Starshipcard/>
+    
+
             {/* Seccion Vehicles  */}
             <h1> Vehicles </h1>
+             <Vehiclecard/>
 
 
             
