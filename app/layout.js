@@ -1,19 +1,11 @@
-import Link from "next/link"  
-// Linea 1: esto traera la funcionalidad en nextJS de poder navegar de una routa a otra
-import "../styles/globals.css"
-// Linea 3: esto importa los styles de CSS
-import Navbar from "./components/navbar"
-// Linea 5: esto importa el componente Navbar 
-
-
 export default function RootLayout({ children }) {
   return (
     <html>
       <head />
-      <body className="w-100 h-100 justify-content-center body1">
+      <body className="">
       
-        <Navbar/>
-      <div className="body2">{children}</div>
+      
+      <div className="">{children}</div>
        
        
       {/* Abajo esta bootstrap */}
