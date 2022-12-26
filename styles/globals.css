@@ -78,13 +78,14 @@ body {
 
 .cardi-b {
   border-radius: 10%;
-  box-shadow: 2px 10px 4px rgb(10, 243, 26),  2px 0px 4px rgb(89, 241, 221);
+  box-shadow: 2px 10px 4px rgb(10, 243, 26),  2px 0px 4px rgb(88, 241, 221);
   border: 10px lime;
 
   margin: 10px;
   border-radius: 7%;
   box-shadow: 0px 0px 2px black;
   /* background-color: inherit; */
+  /* Esto se quita luego */
   scale: 1;
   transition: scale 300ms;
 }
@@ -107,4 +108,5 @@ body {
 
 h2 {
   margin: 4px
+
 }
