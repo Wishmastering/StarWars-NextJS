@@ -1,8 +1,7 @@
 'use client'
 import axios from 'axios';
-import "../../styles/globals.css"
-import Image from "next/image"
-import luke from  "../../public/Luke.webp"
+import "../../styles/globals.css";
+import Image from "next/image";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 

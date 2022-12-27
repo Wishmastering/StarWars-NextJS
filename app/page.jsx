@@ -5,6 +5,8 @@ import Peoplecard from './components/peoplecard';
 import Planetcard from './components/planetcard';
 import Starshipcard from "./components/starshipcard";
 import Vehiclecard from "./components/vehiclecard";
+import Image from "next/image";
+import logo from "../public/logo.png"
 
 
 
@@ -14,7 +16,8 @@ export default function HomePage () {
         <div> 
             {/* Este es el Navbar */}
             <nav>
-                <div> Star Wars Logo</div>
+                {/* <div> <Image src={logo} className="logo"></Image></div> */}
+                <div> Favorite Button</div>
                 <div> Favorite Button</div>
             </nav>
             
@@ -41,11 +44,6 @@ export default function HomePage () {
             {/* Seccion Starships */}
             <h1> Starships </h1>
             <Starshipcard/>
-    
-
-            
-
-            Hola Mundo
         </div>
     </>
 }
