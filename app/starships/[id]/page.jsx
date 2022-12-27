@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from 'next/link';
 import styles from "../../../styles/globals.css"
 
-export default function CharacterInfo({params}){
+export default function StartshipsInfo({params}){
 // Aca debo usar el params para el NUEVO FETCH y traer la informacion COMPLETA del "personaje/vehicle/starships/planets"
 
 {/*  
@@ -20,7 +20,7 @@ CON ESTE PARAMS ID DEBO HACER EL NUEVO
  const [errorMessage, setErrorMessage] = useState('');
 
  const fetchData = async () =>{
-    return await axios.get(`https://www.swapi.tech/api/people/${params.id}`)
+    return await axios.get(`https://www.swapi.tech/api/starships/${params.id}`)
     .then( (response) => {
         setInfo(response.data.result.properties);
         setIsLoading(false);
@@ -51,24 +51,21 @@ return(
         <p>Loading...</p>
       ) : (
         <>
-                <div className='info-container'>
-                    <h1>{info.name}</h1>
-                    <Image src={`https://starwars-visualguide.com/assets/img/characters/${params.id}.jpg`} width={200} height={300} alt={info.name}/>
-                    <h2>{info.name} was born in {info.year}</h2>
-                    <h2>{info.name} has <span style={{color : `${info.eye_color}`}}>{info.eye_color} </span> eye color</h2>
-                    <h2>{info.name} has <span style={{color : `${info.hair_color}`}}>{info.hair_color}</span> hair color</h2>
-                    <h2>{info.name} height is {info.height}cm</h2>
-                    <h2>{info.name} gender is: {info.gender}</h2>
-                </div>
-                <div className='next-div'>
-                    <div className='next-card'> <Link href={`/characters/${parseInt(params.id) + 1}`}> Go To Next Character </Link></div>
-                    {parseInt(params.id) > 1 ?
-                    <div className='next-card'> <Link href={`/characters/${parseInt(params.id) - 1}`}> Go To Previous Character </Link></div> : null}
-                </div>
-            </>
-          )}
-      </div>
-       
-       
-       
-    )}
+        <div className='info-container'>
+        <h1>{info.name}</h1>
+        <Image src={`https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg`} width={200} height={300} alt={info.name}/>
+        <h2>{info.name} cargo capacity is: {info.cargo_capacity}</h2>
+        <h2>{info.name} supplies last fot: {info.consumables} </h2>
+        <h2>{info.name} needs a crew of: {info.crew} </h2>
+        <h2>{info.name} maximum passengers is: {info.passengers} </h2>
+        </div>
+        <div className='next-div'>
+        <div className='next-card'> <Link href={`/starships/${parseInt(params.id) + 1}`}> Go To Next Planet </Link></div>
+        {parseInt(params.id) > 1 ?
+        <div className='next-card'> <Link href={`/starships/${parseInt(params.id) - 1}`}> Go To Previous Planet </Link></div> : null}
+        </div>
+    </>
+      )}
+    </div>
+    );
+}

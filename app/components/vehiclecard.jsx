@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "../../styles/globals.css"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Vehiclecard () {
     // Declaramos un hook donde 
@@ -37,7 +38,7 @@ export default function Vehiclecard () {
                 <h5> {item.name}</h5>
                 <Image src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`} width={200} height={300} alt={item.name}/>
                 <div>
-                    <h5>Learn More</h5>
+                    <h5><Link href={`/vehicles/item.uid`}> Learn More </Link></h5>
                     <h5>Read Later</h5>
                 </div>
             </div>)}

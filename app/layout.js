@@ -1,11 +1,14 @@
+import Navbar from "./components/navbar"
+
 export default function RootLayout({ children }) {
   return (
     <html>
       <head />
       <body>
-      
-      
-      <div>{children}</div>
+      <div>
+        <Navbar/>
+        <div>{children}</div>
+      </div>
        
        
       {/* Abajo esta bootstrap */}

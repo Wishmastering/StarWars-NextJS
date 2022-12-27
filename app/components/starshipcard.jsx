@@ -4,6 +4,7 @@ import "../../styles/globals.css"
 import Image from "next/image"
 import luke from "../../public/Luke.webp"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 
 export default function Startshipcard (){
@@ -39,7 +40,7 @@ export default function Startshipcard (){
                 <h5> {item.name}</h5>
                 <Image src={`https://starwars-visualguide.com/assets/img/starships/${item.uid}.jpg`} width={200} height={300} alt={item.name}/>
                 <div>
-                    <h5>Learn More</h5>
+                    <h5><Link href={`/starships/${item.uid}`}>Learn More </Link></h5>
                     <h5>Read Later</h5>
                 </div>
             </div>)}

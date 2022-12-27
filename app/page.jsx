@@ -14,14 +14,7 @@ export default function HomePage () {
     
     return <>
         <div> 
-            {/* Este es el Navbar */}
-            <nav>
-                {/* <div> <Image src={logo} className="logo"></Image></div> */}
-                <div> Favorite Button</div>
-                <div> Favorite Button</div>
-            </nav>
-            
-            {/* Titulo  de Introduccion al proyceto*/}
+           {/* Titulo  de Introduccion al proyceto*/}
             <div>
                 <h1 className="title">Welcome To The Star Wars Blog - By Carlos Carranza </h1>
             </div>

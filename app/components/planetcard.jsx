@@ -3,6 +3,7 @@ import axios from 'axios';
 import "../../styles/globals.css"
 import { useEffect, useState} from 'react';
 import Image from "next/image"
+import Link from 'next/link';
 
 
 export default function Planetcard () {
@@ -40,7 +41,7 @@ export default function Planetcard () {
                     <h5>{item.name}</h5>
                     <Image src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} width={200} height={300} alt={item.name}/>
                 <div>
-                <h5>Learn More</h5>
+                <h5><Link href={`/planets/${item.uid}`}>Learn More</Link></h5>
                 <h5>Read Later</h5>
                 </div>
                 </div>
