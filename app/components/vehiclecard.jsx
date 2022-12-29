@@ -38,7 +38,7 @@ export default function Vehiclecard () {
                 <h5> {item.name}</h5>
                 <Image src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`} width={200} height={200} alt={item.name}/>
                 <div>
-                    <h5><Link href={`/vehicles/item.uid`}> Learn More </Link></h5>
+                    <h5><Link href={`/vehicle/item.uid`}> Learn More </Link></h5>
                     <h5>Read Later</h5>
                 </div>
             </div>)}

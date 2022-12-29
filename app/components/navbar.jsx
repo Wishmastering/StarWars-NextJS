@@ -23,6 +23,6 @@ import Image from 'next/image';
     return<nav>
    <Link href={"/"}><div><Image src={logo} className="logo"></Image></div></Link>
     {/* <div> Favorite Button</div> */}
-    <div onClick={()=> mostrar()}> Favorite Button</div>
+    <div onClick={()=> mostrar()}> Menu</div>
 </nav>
 }

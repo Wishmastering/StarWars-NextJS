@@ -17,7 +17,7 @@ export default function HomePage () {
         <div> 
            {/* Titulo  de Introduccion al proyceto*/}
             <div>
-                <h1 className="title">Welcome To The Star Wars Blog By - <br/> <Link href="https://github.com/Wishmastering" target="_blank">Carlos Carranza</Link></h1>
+                <h1 className="title">Welcome To The Star Wars Blog By: <Link href="https://github.com/Wishmastering" target="_blank">Carlos Carranza</Link></h1>
             </div>
 
             {/* Seccion Characters  */}

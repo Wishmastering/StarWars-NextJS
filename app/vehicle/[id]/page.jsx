@@ -1,21 +1,32 @@
-'use client'
-import axios from 'axios';
-import { use, useEffect} from 'react';
-import { useState } from 'react';
-import Image from "next/image"
-import Link from 'next/link';
-import styles from "../../../styles/globals.css"
+"use client"
+import axios from "axios"
+import { useState, useEffect } from "react";
 
-export default function StartshipsInfo({params}){
-// Aca debo usar el params para el NUEVO FETCH y traer la informacion COMPLETA del "personaje/vehicle/starships/planets"
+export default function VehicleInfo({params}){
 
-{/*  
-CON ESTE PARAMS ID DEBO HACER EL NUEVO
- FETCH (usando axios) Y ESTE PARAMS SERA LA PARTE FINAL DEL LINK/RUTA  
- `${params.id}` para dinamicamente traer lo que queremos
- */}
+    // const [vehicleInfo, setVehicleInfo] = useState(null)  // Initialize the state with a null value
 
- const [info,setInfo] = useState([]);
+    // const getInfo = async () => {
+        
+    //     return await axios.get('https://swapi.tech/api/vehicle/'.concat(params))
+    //     .then ((response) => {
+    //         // setVehicleInfo(response.data);
+    //         console.log(response.data);
+    //     }) 
+        
+    //     .catch (function (error) {
+    //       console.log(error);
+    //     })
+    //   }
+
+    //   useEffect(() => {
+    //     getInfo()
+    // }, []) // The empty array ensures that the effect is only run on mount
+
+    // return<>
+
+    // </>
+    const [info,setInfo] = useState([]);
  const [isLoading, setIsLoading] = useState(true);
  const [errorMessage, setErrorMessage] = useState('');
 
@@ -60,10 +71,10 @@ return(
             <h2>{info.name} maximum passengers is: {info.passengers} </h2>
         </div>
         <div className='next-div'>
-            <div className='next-card'> <Link href={`/starships/${parseInt(params.id) + 1}`}> Go To Next Starship </Link></div>
+            <div className='next-card'> <Link href={`/starships/${parseInt(params.id) + 1}`}> Go To Next Planet </Link></div>
             
             {parseInt(params.id) > 1 ?
-            <div className='next-card'> <Link href={`/starships/${parseInt(params.id) - 1}`}> Go To Previous Starship </Link></div> : null}
+            <div className='next-card'> <Link href={`/starships/${parseInt(params.id) - 1}`}> Go To Previous Planet </Link></div> : null}
         </div>
     </>
       )}

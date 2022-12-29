@@ -39,7 +39,7 @@ useEffect(() => {
       if (isLoading) {
         setErrorMessage('Seems Like There Is No Results For Your Search, Please Try Again');
       }
-    }, 7000);
+    }, 4500);
     return () => clearTimeout(timeoutId);
   }, [isLoading]);
 
