@@ -7,6 +7,7 @@ import Starshipcard from "./components/starshipcard";
 import Vehiclecard from "./components/vehiclecard";
 import Image from "next/image";
 import logo from "../public/logo.png"
+import Link from "next/link";
 
 
 
@@ -16,7 +17,7 @@ export default function HomePage () {
         <div> 
            {/* Titulo  de Introduccion al proyceto*/}
             <div>
-                <h1 className="title">Welcome To The Star Wars Blog - By Carlos Carranza </h1>
+                <h1 className="title">Welcome To The Star Wars Blog By - <br/> <Link href="https://github.com/Wishmastering" target="_blank">Carlos Carranza</Link></h1>
             </div>
 
             {/* Seccion Characters  */}

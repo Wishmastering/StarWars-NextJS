@@ -20,7 +20,7 @@ CON ESTE PARAMS ID DEBO HACER EL NUEVO
  const [errorMessage, setErrorMessage] = useState('');
 
  const fetchData = async () =>{
-    return await axios.get(`https://www.swapi.dev/api/starships/${params.id}`)
+    return await axios.get(`https://www.swapi.dev/api/vehicles/${params.id}`)
     .then( (response) => {
         setInfo(response.data.result.properties);
         setIsLoading(false);
@@ -59,10 +59,11 @@ return(
         <h2>{info.name} gravity is: {info.gravity} </h2>
         <h2>{info.name} terrain is: {info.terrain} </h2>
         </div>
-        <div className='next-div'>
-        <div className='next-card'> <Link href={`/starships/${parseInt(params.id) + 1}`}> Go To Next Planet </Link></div>
-        {parseInt(params.id) > 1 ?
-        <div className='next-card'> <Link href={`/starships/${parseInt(params.id) - 1}`}> Go To Previous Planet </Link></div> : null}
+            <div className='next-div'>
+            <div className='next-card'> <Link href={`/starships/${parseInt(params.id) + 1}`}> Go To Next Planet </Link></div>
+            
+            {parseInt(params.id) > 1 ?
+            <div className='next-card'> <Link href={`/starships/${parseInt(params.id) - 1}`}> Go To Previous Planet </Link></div> : null}
         </div>
     </>
       )}

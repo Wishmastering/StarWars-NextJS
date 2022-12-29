@@ -1,11 +1,15 @@
 import Navbar from "./components/navbar"
+import Menu from "./components/menu"
 
 export default function RootLayout({ children }) {
   return (
     <html>
       <head />
       <body>
-      <div>
+      <div style={{display:"none"}} id="menu">
+        <Menu/> 
+      </div>
+      <div id="home">
         <Navbar/>
         <div>{children}</div>
       </div>

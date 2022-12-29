@@ -39,7 +39,7 @@ export default function Planetcard () {
             // lo que se quiere mapear para cada uno
                 <div className='cardi-b' key={index}>
                     <h5>{item.name}</h5>
-                    <Image src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} width={200} height={300} alt={item.name}/>
+                    <Image src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} width={200} height={200} alt={item.name}/>
                 <div>
                 <h5><Link href={`/planets/${item.uid}`}>Learn More</Link></h5>
                 <h5>Read Later</h5>

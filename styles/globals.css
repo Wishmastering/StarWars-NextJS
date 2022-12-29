@@ -1,6 +1,15 @@
 @import url("../styles/HelveticaFont/style.css");
 @import url("../styles/HelveticaFont_Light/style.css");
 
+:root {
+  --font-one: 'Space Mono', monospace;
+  --font-two: 'Press Start 2P', cursive;
+  --clr-one: rgb(9, 9, 106);
+  --clr-two: rgb(119, 7, 33);
+  --font-clr: rgb(188, 166, 222);
+
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +27,7 @@
   width: 5px;
   height: 5px;
   /* add some background color to the thumb */
-  background: linear-gradient(180deg, rgb(9, 69, 106), rgb(113, 29, 10));
+  background: linear-gradient(180deg, var(--clr-one), var(--clr-two));
   /* add some border to the thumb */
   border: 1px solid rgb(128, 37, 16);
   /* add some rounded corners to the thumb */
@@ -33,7 +42,8 @@ nav {
   display: flex;
   justify-content: space-between;
   position: sticky;
-  /* top: 0; */
+  top: 0;
+  z-index: 3;
 }
 
 nav div {
@@ -42,6 +52,7 @@ nav div {
   padding-right: 2rem;
   /* justify-content: space-between; */
   /* background-color: aquamarine; */
+  display: flex;
 }
 
 div {
@@ -55,6 +66,11 @@ div {
   font-family: "Press Start 2P";
   margin: 0 auto;
   text-align: center;
+}
+
+.title a{
+  animation: arcoiris 3s infinite;
+  text-decoration: none;
 }
 
 body {
@@ -79,20 +95,17 @@ body {
 
 .cardi-b {
   border-radius: 10%;
-  box-shadow: 2px 10px 4px rgb(10, 243, 26),  2px 0px 4px rgb(88, 241, 221);
+  /* bowsha    x    y  blur color            ,  scale */
+  box-shadow: 2px 2px 4px  var(--clr-one),  -2px -1px 4px var(--clr-two);
   border: 10px lime;
-
   margin: 10px;
   border-radius: 7%;
-  box-shadow: 0px 0px 2px black;
-  /* background-color: inherit; */
-  /* Esto se quita luego */
   scale: 1;
   transition: scale 300ms;
 }
 
 .cardi-b:hover {
-  animation: scalecard 300ms linear 10 forwards;
+  animation: scalecard 300ms linear 1 forwards;
   cursor: pointer
 }
 
@@ -134,15 +147,56 @@ h2 {
   background-color:  #ff00bb17;
   padding: 15px;
   border-radius: 40px;
-  opacity: 1;
-  
+  opacity: 0.6; 
 }
+
+.next-card a{
+  text-decoration: none;
+  color: blanchedalmond;
+}
+
+/* .next-card a:hover{
+  color:aquamarine;
+  transition: color 500ms;
+} */
 
 .next-card:hover {
   opacity: 1;
-  transition: opacity 300ms;
   cursor: pointer;
   border: 1px solid rgb(9, 9, 106);
-  transition: border 5s;
-  transition: opacity 0.5 1000ms;
+  transition: all 500ms;
+}
+
+.next-card:hover a{
+  color: aquamarine;
+  transition: all 500ms;
+}
+
+@keyframes scalecard {
+  0%{
+    scale: 1;
+  }
+
+  100%{
+    scale:1.02;
+  }
+}
+
+@keyframes arcoiris{
+  0%{
+    color: blanchedalmond;
+  }
+
+  25%{
+    color:var(--clr-one)
+  }
+  50%{
+    color:var(--clr-two)
+  }
+  75%{
+    color:green;
+  }
+  100%{
+    color:blanchedalmond
+  }
 }
