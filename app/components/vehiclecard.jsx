@@ -34,7 +34,7 @@ export default function Vehiclecard () {
             {vehicle.map((item,index) =>
         // Despues del arrow function mostramos
         // lo que se quiere mapear para cada uno
-        <div className="cardi-b" key={index}>
+            <div className="cardi-b" key={index}>
                 <h5> {item.name}</h5>
                 <Image src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`} width={200} height={200} alt={item.name}/>
                 <div>

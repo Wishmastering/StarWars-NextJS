@@ -31,9 +31,9 @@ export default function Menu(){
         <Link href="https://www.linkedin.com/in/carlos-i-carranza" target={"_blank"}><h1 className="hover">Linkedin</h1></Link>
         <Link href="https://github.com/Wishmastering" target={"_blank"}><h1 className="hover">Github</h1></Link>
         <Link href={"/characters/1"} onClick={()=>mostrar()}><h1 className="hover">Characters</h1></Link>
-        <Link href={"/planets/1"} onClick={()=>mostrar()}><h1 className="hover">Planets</h1></Link>
-        <Link href={"/starships/1"} onClick={()=>mostrar()}><h1 className="hover">Starships</h1></Link>
-        <Link href={"/vehicles/1"} onClick={()=>mostrar()}><h1 className="hover">Vehicles</h1></Link>
+        <Link href={"/planets/2"} onClick={()=>mostrar()}><h1 className="hover">Planets</h1></Link>
+        <Link href={"/starships/5"} onClick={()=>mostrar()}><h1 className="hover">Starships</h1></Link>
+        <Link href={"/vehicles/4"} onClick={()=>mostrar()}><h1 className="hover">Vehicles</h1></Link>
         </div>
     </>   
 }

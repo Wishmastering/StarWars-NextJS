@@ -35,7 +35,6 @@ export default function Peoplecard () {
     // Lo siguiente es lo que se mostrara
     return<>
     <div className='card-container'>
-    
         {people.map((item,index) => 
         // Despues del arrow function mostramos
         // lo que se quiere mapear para cada uno

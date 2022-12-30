@@ -44,12 +44,16 @@ useEffect(() => {
   }, [isLoading]);
 
 return(
-    <div>
-      {errorMessage ? (
+  <div>
+  {errorMessage ? (
+    <div className='space'>
         <p>{errorMessage}</p>
-      ) : isLoading ? (
+    </div>
+  ) : isLoading ? (
+    <div className='space'>
         <p>Loading...</p>
-      ) : (
+    </div>
+  ) : (
         <>
                 <div className='info-container'>
                     <h1>{info.name}</h1>
@@ -60,13 +64,13 @@ return(
                     <h2>{info.name} height is {info.height}cm</h2>
                     <h2>{info.name} gender is: {info.gender}</h2>
                 </div>
+            </>
+          )}
                 <div className='next-div'>
                     <div className='next-card'> <Link href={`/characters/${parseInt(params.id) + 1}`}> Go To Next Character </Link></div>
                     {parseInt(params.id) > 1 ?
                     <div className='next-card'> <Link href={`/characters/${parseInt(params.id) - 1}`}> Go To Previous Character </Link></div> : null}
                 </div>
-            </>
-          )}
       </div>
        
        

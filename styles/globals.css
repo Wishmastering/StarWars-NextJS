@@ -256,5 +256,14 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20vw;
-  margin: 10rem;
+  margin: 5rem;
+}
+
+.space{
+  height: 50vh;
+  font-size: 5vmin;
+}
+
+.menu1{
+  cursor: pointer;
 }

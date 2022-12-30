@@ -46,9 +46,13 @@ useEffect(() => {
 return(
     <div>
       {errorMessage ? (
-        <p>{errorMessage}</p>
+        <div className='space'>
+            <p>{errorMessage}</p>
+        </div>
       ) : isLoading ? (
-        <p>Loading...</p>
+        <div className='space'>
+            <p>Loading...</p>
+        </div>
       ) : (
         <>
         <div className='info-container'>
@@ -59,14 +63,15 @@ return(
             <h2>{info.name} needs a crew of: {info.crew} </h2>
             <h2>{info.name} maximum passengers is: {info.passengers} </h2>
         </div>
+    </>
+      )}
         <div className='next-div'>
             <div className='next-card'> <Link href={`/vehicles/${parseInt(params.id) + 1}`}> Go To Next Starship </Link></div>
             
             {parseInt(params.id) > 1 ?
             <div className='next-card'> <Link href={`/vehicles/${parseInt(params.id) - 1}`}> Go To Previous Starship </Link></div> : null}
         </div>
-    </>
-      )}
+      
     </div>
     );
 }
