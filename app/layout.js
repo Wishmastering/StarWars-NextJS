@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar"
 import Menu from "./components/menu"
+import Footer from "./components/footer"
 
 export default function RootLayout({ children }) {
   return (
@@ -12,6 +13,9 @@ export default function RootLayout({ children }) {
       <div id="home">
         <Navbar/>
         <div>{children}</div>
+      </div>
+      <div className="mt-5">
+        <Footer/>
       </div>
        
        

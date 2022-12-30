@@ -160,6 +160,17 @@ body {
   margin: 4px;
 }
 
+.cardi-b a{
+  text-decoration: none;
+  color: rgb(145, 149, 181);
+}
+
+.cardi-b a:hover{
+  text-decoration: underline;
+  color: aquamarine;
+}
+
+
 h2 {
   margin: 4px
 }
@@ -239,4 +250,11 @@ h2 {
   100%{
     color:blanchedalmond
   }
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20vw;
+  margin: 10rem;
 }
