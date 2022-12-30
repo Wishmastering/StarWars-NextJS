@@ -30,7 +30,7 @@ export default function Planetcard () {
     // que acabamos de definir
     
     useEffect(() => {fetchPlanet()}, []);
-    console.log("These are the planets:", planet)
+    // console.log("These are the planets:", planet)
 
     return<>
         <div className="card-container">

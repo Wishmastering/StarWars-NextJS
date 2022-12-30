@@ -43,7 +43,8 @@ export default function Peoplecard () {
         <div key={index}> 
             <div className="cardi-b" key={index}>
                 <h5>{item.name}</h5>
-                <Image src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} width={200} height={200} alt={item.name}/>
+                <Image src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} 
+                width={200} height={200} alt={item.name}/>
                 <div>
                     <Link href={`/characters/${item.uid}`}><h5>Learn More</h5></Link>
                     <h5>Read Later</h5>

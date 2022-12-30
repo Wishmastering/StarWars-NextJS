@@ -29,7 +29,7 @@ export default function Startshipcard (){
     // useEffect que se encargara de "cargar la funcion"
     // que acabamos de definir
     useEffect(()=> {fetchStarship()}, []);
-    console.log("These are the starships:", starship)
+    // console.log("These are the starships:", starship)
     
     return <>
     <div className="card-container">
