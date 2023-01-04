@@ -1,21 +1,15 @@
 'use client'
-
 import "../styles/globals.css"
 import Peoplecard from './components/peoplecard';
 import Planetcard from './components/planetcard';
 import Starshipcard from "./components/starshipcard";
 import Vehiclecard from "./components/vehiclecard";
-import Image from "next/image";
-import logo from "../public/logo.png"
-import Link from "next/link";
 import { useState, useEffect } from "react";
-
-
 
 export default function HomePage () {
     
 
-    const [isLoading, setIsLoading] = useState(true);
+const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
