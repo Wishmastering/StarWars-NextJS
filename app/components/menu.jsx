@@ -25,7 +25,7 @@ export default function Menu(){
         </div> */}
         <div className="menu">
             <div className="op"> Hello </div>
-            <div onClick={()=> mostrar()} className="close"> Close</div>
+            <div onClick={()=> mostrar()} className="close"> Exit</div>
         </div>
         <div className="links">
         <Link href="https://www.linkedin.com/in/carlos-i-carranza" target={"_blank"}><h1 className="hover">Linkedin</h1></Link>
