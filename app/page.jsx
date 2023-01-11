@@ -5,6 +5,7 @@ import Planetcard from './components/planetcard';
 import Starshipcard from "./components/starshipcard";
 import Vehiclecard from "./components/vehiclecard";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function HomePage () {
     
