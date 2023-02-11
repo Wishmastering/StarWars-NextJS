@@ -21,7 +21,7 @@ const [isLoading, setIsLoading] = useState(true);
 
     return <>
     {isLoading ? (
-      <p>Loading..</p>
+      <p>Loading...</p>
     ) : (
         <div> 
            {/* Titulo  de Introduccion al proyceto*/}
